@@ -1,0 +1,32 @@
+@use "../../styles/breakpoints" as *;
+@use "../../styles/variables.scss" as *;
+
+.widget-list {
+  padding: 40px 40px 120px 40px;
+  max-width: 780px;
+  background-color: $lightGrayColor;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 5, 0.3);
+
+  @include is-mobile {
+    padding: 20px;
+    margin: 20px 15px;
+  }
+
+  &__divider {
+    border: 1.5px solid $grayColor;
+    margin: 20px 0;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+
+    @include is-mobile {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+}

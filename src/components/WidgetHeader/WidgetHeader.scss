@@ -1,0 +1,60 @@
+@use "../../styles/variables" as *;
+
+.widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  border-radius: 6px;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+
+  &.blue {
+    background-color: $blueColor;
+  }
+
+  &.green {
+    background-color: $greenColor;
+  }
+
+  &.beige {
+    background-color: $beigeColor;
+  }
+
+  &.black {
+    background-color: $blackColor;
+  }
+
+  &.white {
+    background-color: $whiteColor;
+  }
+
+  &__img {
+    padding-left: 15px;
+  }
+
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  span {
+    &.text-white {
+      color: $whiteColor;
+    }
+
+    &.text-black {
+      color: $blackColor;
+    }
+  }
+
+  &__top-text {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  &__bottom-text {
+    font-size: 18px;
+  }
+}

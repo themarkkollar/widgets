@@ -1,0 +1,42 @@
+@use "../../styles/variables.scss" as *;
+
+.color-select {
+  display: flex;
+  gap: 6px;
+
+  &__item {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+
+    &--black {
+      background-color: $blackColor;
+    }
+
+    &--beige {
+      background-color: $beigeColor;
+    }
+
+    &--green {
+      background-color: $greenColor;
+    }
+
+    &--white {
+      background-color: $whiteColor;
+    }
+
+    &--blue {
+      background-color: $blueColor;
+    }
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    &.selected {
+      border: 2px solid $grayColor;
+    }
+  }
+}
