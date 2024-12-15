@@ -1,50 +1,65 @@
-# React + TypeScript + Vite
+# Greenspark Product Widgets
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that displays and manages eco-friendly product widgets. Each widget represents different environmental impacts like carbon offsetting, tree planting, and plastic bottle collection.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Display multiple product widgets with different environmental impacts
+- Toggle widget activation status
+- Link/unlink widgets to public profile
+- Customize widget colors (blue, green, beige, white, black)
+- Responsive design for mobile and desktop
+- Interactive UI components with hover effects
+- Storybook integration for component documentation
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React 18
+- TypeScript
+- Vite
+- SASS for styling
+- Axios for API calls
+- Storybook for component documentation
 
-- Configure the top-level `parserOptions` property like this:
+## Prerequisites
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Node.js (v16 or higher)
+- npm or yarn
+
+## Getting Started
+
+1. Clone the repository: `git clone [repository-url]`
+2. Install dependencies: `npm install`
+3. Create a `.env` file in the root directory and add your API URL: `VITE_APP_API_URL=your_api_url_here`
+4. Start the development server: `npm run dev`
+
+The application will be available at `http://localhost:5173`
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run storybook` - Start Storybook development server
+- `npm run build-storybook` - Build Storybook for deployment
+
+## Project Structure
+
+```
+src/
+├── assets/ # Static assets (images, icons)
+├── components/ # React components
+├── services/ # API services
+├── styles/ # Global styles and variables
+├── types/ # TypeScript interfaces and types
+├── App.tsx # Main application component
+└── main.tsx # Application entry point
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Component Documentation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+The project uses Storybook for component documentation. To view the component library:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Start Storybook: `npm run storybook`
+2. Open `http://localhost:6006` in your browser
